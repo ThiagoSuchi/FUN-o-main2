@@ -1,0 +1,8 @@
+Não há palavras duplicadas, parágrafo 1: ----- 
+Não há palavras duplicadas, parágrafo 2: ----- 
+Há palavras duplicadas, parágrafo 3: uma 
+Não há palavras duplicadas, parágrafo 4: ----- 
+Não há palavras duplicadas, parágrafo 5: ----- 
+Não há palavras duplicadas, parágrafo 6: ----- 
+Há palavras duplicadas, parágrafo 7: dispositivos, web, seu, conectado 
+Há palavras duplicadas, parágrafo 8: cliente, uma, para 

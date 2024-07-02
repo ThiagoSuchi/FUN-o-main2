@@ -1,14 +1,3 @@
-const { log } = require('console');
-const fs = require('fs');
-
-const caminhoArquivo = process.argv;
-const link = caminhoArquivo[2];
-
-
-fs.readFile(link, 'utf-8', (erro, texto) => {
-    // verificaPalavrasDuplicadas(texto);
-    quebraEmParagrafos(texto)
-})
 // --------------------------------------------------------------------------------------------
 /*
  1 passo: Criar um array com as palavras;
@@ -17,23 +6,20 @@ fs.readFile(link, 'utf-8', (erro, texto) => {
 */
 // --------------------------------------------------------------------------------------------
 
-//===============================================================================================
-
 // A função quebraEmParagrafos é projetada para receber um texto, dividir esse texto em parágrafos com base em quebras de linha, filtrar parágrafos vazios e contar as palavras em cada parágrafo usando a função verificaPalavrasDuplicadas. Ela usa métodos como toLowerCase() para garantir consistência nas palavras, split('\n') para dividir o texto em parágrafos e .filter() para remover parágrafos vazios antes de contar as palavras.
-function quebraEmParagrafos(texto) {
+export function contaPalavras(texto) {
     const paragrafos = texto.toLowerCase().split('\n');
     const contagem = paragrafos.flatMap((paragrafo) => {
         if(!paragrafo) return []
         return verificaPalavrasDuplicadas(paragrafo);
     })
-    console.log(contagem);
+    return contagem
 // Uso de flatMap: flatMap é escolhido para lidar com parágrafos e seus resultados de contagem de palavras de forma achatada, simplificando o processamento e evitando arrays aninhados. É uma forma melhor e performatica de executar oque o método .filter e .map estavam fazendo. Veja logo abaixo:
 
     // .filter((paragrafo) => paragrafo)
     // .map((paragrafo) => {
     //     return verificaPalavrasDuplicadas(paragrafo);
     // })
-    
 }
 
 //===============================================================================================
